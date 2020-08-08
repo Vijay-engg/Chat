@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel='stylesheet'
+         href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="{% static '../static/style.css' %}">
+      <link rel="stylesheet" href="{% static '../static/style.css.map' %}">
+
+   </head>
+
+   <body>
+      <div class="container">
+         <section id="formHolder">
+
+            <div class="row">
+
+               <div class="col-sm-6 brand">
+                  <a href="#" class="logo">Chat</a>
+
+                  <div class="heading">
+                     <h2>Chat</h2>
+                     <p>Your Right Choice</p>
+                  </div>
+
+                  <div class="success-msg">
+                     <p>Great! You are one of our members now</p>
+                  </div>
+               </div>
+
+               <div class="col-sm-6 form">
+
+                  <div class="login form-peice switched">
+                     <form class="login-form" action="#" method="post">
+                        <legend>Sign in</legend>
+                        <div class="form-group">
+                           <label for="loginemail">Phone Number or Mail ID</label>
+                           <input type="text" pattern="[0-9]{10}|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                              name="loginemail" id="loginemail" required>
+                        </div>
+
+                        <div class="form-group">
+                           <label for="loginPassword">Password</label>
+                           <input type="password" name="loginPassword" id="loginPassword" required>
+                        </div><br>
+
+                        <div class="form-group">
+                           <a href=""><img width="20px" height="20px" src="{% static '../static/fb.png' %}"></a>
+                           <a href=""><img width="20px" height="20px" src="{% static '../static/insta.png' %}"></a>
+                           <a href=""><img width="20px" height="20px" src="{% static '../static/gle.png' %}"></a>
+                        </div>
+
+
+                        <div class="CTA">
+                           <input type="submit" value="Sign in">
+                           <a href="#" class="switch">I'm New</a>
+                        </div>
+                     </form>
+                  </div>
+
+                  <div class="signup form-peice">
+                     <form class="signup-form" action="#" method="post">
+                        <legend>Create an account</legend>
+
+                        <div class="form-group">
+                           <label for="name">Full Name</label>
+                           <input type="text" pattern="[a-ZA-z]" name="username" id="name" class="name">
+                           <span class="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                           <label for="email">Email Adderss</label>
+                           <input type="email" name="email" id="email" class="email">
+                           <span class="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                           <label for="phone">Phone Number</label>
+                           <input type="text" name="phone" id="phone">
+                        </div>
+
+                        <div class="form-group">
+                           <label for="password">Password</label>
+                           <input type="password" name="password" id="password" class="pass">
+                           <span class="error"></span><br><br>
+                        </div>
+
+                        <div class="form-group">
+                           <a href=""><img width="20px" height="20px" src="{% static '../static/fb.png' %}"></a>
+                           <a href=""><img width="20px" height="20px" src="{% static '../static/insta.png' %}"></a>
+                           <a href=""><img width="20px" height="20px" src="{% static '../static/gle.png' %}"></a>
+                        </div>
+
+                        <div class="CTA">
+                           <input type="submit" value="Sign up" id="submit">
+                           <a href="#" class="switch">I have an account</a>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+
+         </section>
+
+      </div>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="{% static 'script.js' %}"></script>
+
+   </body>
+
+</html>
