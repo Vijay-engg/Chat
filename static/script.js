@@ -1,4 +1,4 @@
-/*global $, document, window, setTimeout, navigator, console, location*/
+/*global $, document, window, setTimeout, navigator, console, location
 $(document).ready(function () {
 
     'use strict';
@@ -7,7 +7,7 @@ $(document).ready(function () {
         emailError    = true,
         passwordError = true,
         passConfirm   = true;
-
+*/
     // Detect browser for css purpose
     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
         $('.form form label').addClass('fontSwitch');
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
         $(this).siblings('label').addClass('active');
     });
-
+/*
     // Form validation
     $('input').blur(function () {
 
@@ -74,7 +74,7 @@ $(document).ready(function () {
         }
     });
 
-
+*/
     // form switch
     $('a.switch').click(function (e) {
         $(this).toggleClass('active');
@@ -87,13 +87,13 @@ $(document).ready(function () {
         }
     });
 
-
+/*
     // Form submit
     $('form.signup-form').submit(function (event) {
         event.preventDefault();
 
         if (usernameError == true || emailError == true || passwordError == true || passConfirm == true) {
-            $('.name, .email, .pass, .passConfirm').blur();
+            $('.name, .email, .phone, .password').blur();
         } else {
             $('.signup, .login').addClass('switched');
 
@@ -113,3 +113,4 @@ $(document).ready(function () {
 
 
 });
+*/  

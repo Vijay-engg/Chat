@@ -20,32 +20,29 @@
             <div class="row">
 
                <div class="col-sm-6 brand">
-                  <a href="#" class="logo">Chat</a>
+                  <a href="#" class="logo">Chatee</a>
 
                   <div class="heading">
-                     <h2>Chat</h2>
+                     <h2>Chatee</h2>
                      <p>Your Right Choice</p>
-                  </div>
-
-                  <div class="success-msg">
-                     <p>Great! You are one of our members now</p>
                   </div>
                </div>
 
                <div class="col-sm-6 form">
+                  <!-- Login -->
 
-                  <div class="login form-peice switched">
-                     <form class="login-form" action="#" method="post">
+                  <div class="login form-peice">
+                     <form class="login-form" action="login" method="POST" autocomplete="off">
+                        {% csrf_token %}
                         <legend>Sign in</legend>
                         <div class="form-group">
-                           <label for="loginemail">Phone Number or Mail ID</label>
-                           <input type="text" pattern="[0-9]{10}|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                              name="loginemail" id="loginemail" required>
+                           <label for="loginemail">username</label>
+                           <input type="text" name="username" id="loginemail" required>
                         </div>
 
                         <div class="form-group">
                            <label for="loginPassword">Password</label>
-                           <input type="password" name="loginPassword" id="loginPassword" required>
+                           <input type="password" name="password" id="loginPassword" required>
                         </div>
 
                         <div class="CTA">
@@ -55,13 +52,16 @@
                      </form>
                   </div>
 
-                  <div class="signup form-peice">
-                     <form class="signup-form" action="#" method="post">
+                  <!-- Reg -->
+
+                  <div class="signup form-peice switched">
+                     <form class="signup-form" action="register" method="POST" autocomplete="off">
+                        {% csrf_token %}
                         <legend>Create an account</legend>
 
                         <div class="form-group">
-                           <label for="name">Full Name</label>
-                           <input type="text" pattern="[a-ZA-z]" name="username" id="name" class="name">
+                           <label for="name">Full Name</label>{% for message in messages%}<small>{{message}}</small>{% endfor %}
+                           <input type="text" name="username" id="name" class="name">
                            <span class="error"></span>
                         </div>
 
@@ -71,15 +71,15 @@
                            <span class="error"></span>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                            <label for="phone">Phone Number</label>
-                           <input type="text" name="phone" id="phone">
-                        </div>
+                           <input type="text" name="phone" id="phone" required>
+                        </div> -->
 
                         <div class="form-group">
                            <label for="password">Password</label>
                            <input type="password" name="password" id="password" class="pass">
-                           <span> class="error"></span>
+                           <span class="error"></span>
                         </div>
 
                         <div class="CTA">
